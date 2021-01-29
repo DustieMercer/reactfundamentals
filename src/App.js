@@ -1,19 +1,14 @@
 import './App.css';
-import DustieBio from './components/Challenges/day01/Dustie';
-import Header from './components/Header';
-import Footer from './components/Challenges/day01/Footer'
-import Home from './components/Challenges/day01/Home'
+import AlumniComponent from './components/Challenges/day02/Contacts'
+import State from './components/Challenges/day02/State'
 
 function App() {
-  const name = 'Dustie'
+  const profile = {name: 'Dustie', age:'34', school: 'EFA', year:"2021"}
   return(
     <div className ='App'>
-      <Home />
-      <h1>Welcome to React, {name}</h1>
-      <h2>We just modified our root component</h2>
-      <Header />
-      <DustieBio />
-      <Footer />
+  <AlumniComponent {...profile} />
+  <p>-----------------------</p>
+  <State />
       </div>
   );
 }
